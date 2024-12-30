@@ -47,6 +47,6 @@ logoutButton.addEventListener('click', () => {
     const logout = confirm('Are you sure you want to logout?');
 
             if (logout) {
-                window.location.href = '/index.html';
+                window.location.href = './index.html';
             }
 });
