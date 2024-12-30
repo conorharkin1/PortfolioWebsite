@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conor Harkin</title>
+    <script src="main-script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/Main.css">
+</head>
+<body>
+    <div class="desktop">
+        <!-- DESKTOP ICONS -->
+         <button class="icon" id="aboutMe" onclick="openDialog('aboutMe','Icons/Person_Undefined_Male_Light.ico', 'About Me')">
+            <img src="Icons/Person_Undefined_Male_Light.ico">
+            <h4>About Me</h4>
+         </button>
+         <button class="icon" id="socials" onclick="openDialog('socials','Icons/fireFoxIcon.png', 'Socials')">
+            <img src="Icons/fireFoxIcon.png">
+            <h4>Socials</h4>
+         </button>
+         <button class="icon" id="projects" onclick="openDialog('projects','Icons/folderMany.png', 'Projects')">
+            <img src="Icons/folderMany.png">
+            <h4>Projects</h4>
+         </button>
+         <button class="icon" id="email" onclick="openDialog('email','Icons/Email.png', 'Contact Information')">
+            <img src="Icons/Email.png">
+            <h4>Contact<br>Information</h4>
+         </button>
+         <button class="icon" id="cv" onclick="openDialog('cv','Icons/aboutMe.png', 'CV')">
+            <img src="Icons/aboutMe.png">
+            <h4>CV</h4>
+         </button>
+         <button class="icon" id="workExperience" onclick="openDialog('workExperience','Icons/workExperience.png', 'Work Experience')">
+            <img src="Icons/workExperience.png">
+            <h4>Work Experience</h4>
+         </button>
+         <button class="icon" id="education" onclick="openDialog('education','Icons/education.png', 'Education')">
+            <img src="Icons/education.png">
+            <h4>Education</h4>
+         </button>
+    </div>
+    <!-- ABOUTME DIALOG -->
+    <dialog class="dialog" id="aboutMe-dialog">
+        <div class="dialog-header">
+            <div> 
+                <div id="aboutMe-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="aboutMe-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('aboutMe')">X</button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-body-aboutMe-container">
+                <img src="Icons/me.png" alt="me">
+                <div class="aboutMe-text">
+                    I am currently studying Software Engineering at Queen's University Belfast in my third year. 
+                    While on my placement gaining industry experience I have been highly motivated to continue improving my skills as a developer.
+                    I enjoy working independently however I possess excellent communication skills and thrive in collaborative environments.
+
+                    <br><br>Outside of my professional career I enjoy working on my own personal projects to help me consolidate the information and technologies I come across through working in industry or university.
+                    <br><br>Some techincal skills I have been learning include:
+                    <br>- C# (.NET Core)
+                    <br>- Familiarity with SSMS and SQL
+                    <br>- Vue JS
+                    <br>- Java
+                </div>
+            </div>
+        </div>
+     </dialog>
+    <!-- SOCIALS DIALOG -->
+    <dialog class="dialog" id="socials-dialog">
+        <div class="dialog-header">
+            <div>
+                <div id="socials-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="socials-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('socials')">X</button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-body-socials-container">
+                <a href="https://github.com/conorharkin1" target="_blank">
+                    <img src="Icons/github-mark-white.png" alt="https://github.com/conorharkin1">
+                </a>
+                <a href="https://www.linkedin.com/in/conorharkin10/" target="_blank">
+                    <img src="Icons/linkedIn.png" alt="https://www.linkedin.com/in/conorharkin10/">
+                </a>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- PROJECTS DIALOG-->
+     <dialog class="dialog" id="projects-dialog">
+        <div class="dialog-header">
+            <div> 
+                <div id="projects-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="projects-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('projects')">X</button>
+        </div>
+        <div class="dialog-body">
+            COMING SOON
+        </div>
+     </dialog>
+
+     <!-- EMAIL DIALOG -->
+     <dialog class="dialog" id="email-dialog">
+        <div class="dialog-header">
+            <div> 
+                <div id="email-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="email-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('email')">X</button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-body-email-container">
+                <h3>Primary: </h3><h2>conorharkin10@gmail.com</h2>
+                <h3>Secondary: </h3><h2>charkin23@qub.ac.uk</h2>
+                <h3>Phone number: </h3><h2>+353 83 0494484</h2>
+            </div>
+        </div>
+     </dialog>
+
+     <!-- CV DIALOG -->
+     <dialog class="dialog" id="cv-dialog">
+        <div class="dialog-header">
+            <div> 
+                <div id="cv-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="cv-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('cv')">X</button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-body-cv-container">
+                <iframe src="Attachments/CV.pdf" frameborder="0"></iframe>
+            </div>
+            <div class="cv-container-mobile">
+                Unfortunately this is not compatible with smaller screens yet, please download my cv here
+                <br>
+                <a href="Attachments/CV.pdf" download="CV.pdf">
+                    <i class="bi bi-download"></i>
+                </a>
+            </div>
+        </div>
+     </dialog>
+
+     <!-- WORK EXPERIENCE DIALOG -->
+     <dialog class="dialog" id="workExperience-dialog">
+        <div class="dialog-header">
+            <div> 
+                <div id="workExperience-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="workExperience-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('workExperience')">X</button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-body-education-container">
+                <h3><b>Placement Software Engineer at EventMap May 2024 - May 2025</b></h3>
+                <br><b>Skills:</b>
+                <br>
+                <br>- C# (.NET Core)
+                <br>- Software QA
+                <br>- Vue JS
+                <br>- SSMS
+                <br>- Jira Service desk - working closely with clients to discuss various feature requirements and scope 
+                <br>- Experience working across the full development stack with a focus on back-end dvelopment
+                <br>
+                <br>
+                <h4><b>Bar Waiter part time June 2021 - August 2023</b></h4>
+                <br><b>Skills:</b>
+                <br>
+                <br>- Customer service
+                <br>- Communication
+                <br>- Time management
+                <br>- Fast paced environment
+            </div>
+        </div>
+     </dialog>
+
+     <!-- EDUCATION DIALOG -->
+     <dialog class="dialog" id="education-dialog">
+        <div class="dialog-header">
+            <div> 
+                <div id="education-header-icon"> <!-- This will be dynamically populated with the correct icon when the modal opens --> </div>
+            </div>
+            <div>
+                <div id="education-header-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+            </div>
+            <button class="close-btn" onclick="closeDialog('education')">X</button>
+        </div>
+        <div class="dialog-body">           
+            <div class="dialog-body-education-container">
+                <h3><b>BEng Software Engineering at Queen's University Belfast - September 2022 - May 2026</b></h3>
+                <br><b>Relevant Modules:</b>
+                <br>
+                <br>- Object Oriented Programming (Obtained a First)
+                <br>- Procedural Programming (Obtained a First)
+                <br>- Professional and Transfer Skills (Obtained a First)
+                <br>- Databases (Obtained a 2:1)
+                <br>- Introduction to Cyber Security (Obtained a 2:1)
+                <br>- Fundamentals of Maths for Computing (Obtained a 2:1)
+                <br>- Service Oriented Programming (Obtained a 2:1)
+                <br>- Data Structures and Algorithms (Obtained a 2:1)
+                <br><br>
+                <h3><b>Pobalscoil Chloich Cheannfhaola 2017-2022</b></h3>
+                <br>- H1 Design and Communication Graphics
+                <br>- H1 Engineering
+                <br>- H2 Math
+                <br>
+                <br>Total Points: 578
+            </div>
+        </div>
+     </dialog>
+
+    <footer class="taskbar">
+        <button class="taskbar-item" id="logout">
+            <i class="bi bi-power"></i>
+        </button>
+        <div>
+            <div id="taskbar-dialog-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

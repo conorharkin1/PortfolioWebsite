@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+/* By default the dialog should be closed */
+dialog:not([open]) {
+    display: none;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-image: url(../Images/win7Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    height: calc(100% - 40px);
+}
+.icon {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.icon img {
+    width: auto;
+    height: 64px;
+    margin-bottom: 5px;
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 70%, transparent 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 15px;
+    color: white;
+}
+
+.taskbar-item {
+    font-size: 2em;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000, 5px 5px 0 #808080;
+}
+
+.dialog.dialog#cv-dialog {
+    resize: both;
+    overflow: hidden;
+    height: 75%;
+    width: 70%;
+}
+
+.cv-container-mobile {
+    display: none;
+}
+
+.dialog.dialog#aboutMe-dialog {
+    height: 70%;
+    width: 80%;
+}
+
+/* Dialog Header */
+.dialog-header {
+    display: flex;
+    width: 100%;
+    height: 12%;
+    align-items: center;
+    text-align: center;
+    background: #000080;
+    color: white;
+    padding-left: 5px;
+    border-bottom: 2px solid #808080;
+    gap: 20px;
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.dialog-header img {
+    height: 40px;
+    width: 40px;
+}
+
+.close-btn {
+    background: #ff0000;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 0 #808080 inset;
+    margin-left: auto;
+}
+
+.close-btn:hover {
+    background: #cc0000;
+}
+
+/* Dialog Body */
+.dialog-body {
+    display: flex;
+    min-height: 88%;
+    overflow-y: auto;
+    background-color: darkgrey;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dialog-body-aboutMe-container {
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000, 5px 5px 0 #808080;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.dialog-body-aboutMe-container img {
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.aboutMe-text {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.dialog-body-socials-container {
+    display: flex;
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000, 5px 5px 0 #808080;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10%;
+}
+
+.dialog-body-email-container {
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000, 5px 5px 0 #808080;
+    display: block;
+    width: 90%;
+    height: 90%;
+    padding: 5px;
+    text-align: center;
+    align-content: center;
+    overflow: auto;
+}
+
+.dialog-body-education-container {
+    background: #c0c0c0;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000, 5px 5px 0 #808080;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.dialog-body-cv-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.dialog-body-cv-container iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.dialog-body-email-container h2 {
+    padding: 20px;
+}
+
+.dialog-body img {
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 500px) {
+    body {
+        background-image: url(../Images/win7HomeSmall.jpg);
+        background-size: cover;
+    }
+
+    .desktop {
+        gap: 5px;
+        font-size: small;
+    }
+
+    .icon img {
+        max-width: 100%;
+        width: auto;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .dialog {
+        display: flex;
+        flex-direction: column;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 80%;
+        height: 70%;
+        background: #c0c0c0;
+        border: 2px solid #000;
+        box-shadow: 3px 3px 0 #000, 5px 5px 0 #808080;
+    }
+
+    .dialog-header {
+        display: flex;
+        width: 100%;
+        height: auto;
+        outline: none;
+        padding: 5px;
+        align-items: center;
+        color: white;
+        gap: 15px;
+        font-size: 20px;
+    }
+
+    .dialog-header img {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .dialog-body {
+        width: 100%;
+        height: 90%;
+        overflow: auto;
+    }
+
+    .dialog-body img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .dialog-body-aboutMe-container {
+        height: 100%;
+    }
+
+    .dialog-body-socials-container {
+        height: 90%;
+        width: 90%;
+    }
+
+    .dialog-body-email-container {
+        font-size: 0.5em;
+    }
+
+    .dialog-body-cv-container {
+        display: none;
+    }
+
+    .cv-container-mobile {
+        display: block;
+        text-align: center;
+    }
+    
+}

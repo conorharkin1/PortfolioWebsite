@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../Images/win7HomeSmall.jpg);
+    background-repeat: no-repeat;
+    background-position: fill;
+    background-position: right;
+}
+
+/*PROFILE IMAGE*/
+
+.profile-icon {
+    position: absolute;
+    transform: translateY(-110%);
+    width:150px; height:150px;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 70%, transparent 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture {
+    width: 120px;
+    height: 120px;
+    background-image: url(../Images/profilePicture.bmp);
+    background-size: contain;
+}
+  
+/*INPUT BOX*/
+
+.wrapper {
+    width: 420px;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background: transparent;
+}
+
+.wrapper h1 {
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .input-box {
+    display: inline-flex;
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 2px solid grey;
+    outline: none;
+    font-size: 15px;
+    color: gray;
+    padding-left: 10px;
+}
+
+.input-box input::placeholder {
+    color: grey;
+}
+
+.input-box .submit-btn {
+    right: 300px;
+    top: 50%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box .submit-btn i {
+    font-size: 30px;
+    color: gray;    
+    margin-left: 10px;
+    
+}
+
+.input-box .submit-btn i:hover {
+    color: lightgrey;
+    
+}
