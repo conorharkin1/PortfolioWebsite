@@ -33,7 +33,6 @@ function closeDialog(id) {
 document.onkeydown = function(event) {
     if (event.key === 'Escape') {
         const activeButton = document.querySelector('.icon[style*="border"]');
-
         if (activeButton) {
             activeButton.style.border = '';
             const taskbarTitle = document.getElementById('taskbar-dialog-title');
@@ -44,9 +43,33 @@ document.onkeydown = function(event) {
 
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
-    const logout = confirm('Are you sure you want to logout?');
-
-            if (logout) {
-                window.location.href = './index.html';
-            }
+    window.location.href = './index.html';
 });
+
+const profileButton = document.getElementById('profile');
+profileButton.addEventListener('click', () => {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+    console.log('Here');
+});
+
+function toggleDropdown() {
+    var dropdown = document.getElementById('windowsOptions');
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    displayUsername();
+}
+
+function displayUsername() {
+    const username = sessionStorage.getItem("username");
+
+    if (username) {
+        document.getElementById('profile-username').textContent = `${username}`;
+    } else {
+        document.getElementById('profile-username').textContent = "Guest";
+    }
+}
+
+

@@ -1,20 +1,29 @@
+const submitButton = document.querySelector('.submit-btn');
+const textbox = document.getElementById('login-textbox');
+
 document.onkeydown = function(event) {
     if (event.key == 'Enter') {
+        captureUsername();
         window.location.href = './main.html';
     }
 }
 
-const submitButton = document.querySelector('.submit-btn');
 submitButton.addEventListener('click', function() {
+    captureUsername();
     window.location.href = './main.html';
 });
 
-
-const textbox = document.getElementById('login-textbox');
 textbox.addEventListener('keydown', function(event) {
     if (event.key == 'Enter') {
-        // Prevents form from refreshing login page and instead redirects it correctly
+        //Prevent page from refreshing
         event.preventDefault();
-        window.location.href = './main.html';  // Redirect to the target page
+        captureUsername();
+        window.location.href = './main.html';
     }
 });
+
+function captureUsername() {
+    const username = textbox.value;
+    sessionStorage.setItem("username", username);
+}
+

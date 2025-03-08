@@ -62,9 +62,11 @@
                     <br><br>Outside of my professional career, I enjoy working on my own personal projects to help me consolidate the information and technologies I come across through working in industry and university.
                     <br><br>Some techincal skills I have been learning include:
                     <br>- C# (.NET Core)
-                    <br>- Familiarity with SSMS and SQL
+                    <br>- SSMS and SQL
                     <br>- Vue JS
                     <br>- Java
+                    <br>- Playwright
+                    <br>- QA Testing
                 </div>
             </div>
         </div>
@@ -144,7 +146,7 @@
                 <iframe src="Attachments/CV.pdf" frameborder="0"></iframe>
             </div>
             <div class="cv-container-mobile">
-                Unfortunately this is not compatible with smaller screens yet, please download my cv here
+                Unfortunately this is not compatible with smaller screens, please download my cv here
                 <br>
                 <a href="Attachments/CV.pdf" download="CV.pdf">
                     <i class="bi bi-download"></i>
@@ -224,13 +226,18 @@
      </dialog>
 
     <footer class="taskbar">
-        <button class="taskbar-item" id="logout">
-            <i class="bi bi-power"></i>
+        <button onclick="toggleDropdown()" class="taskbar-item" id="temp">
+            <i class="bi bi-windows"></i>
+            <ul id="windowsOptions" class="dropdown-content">
+                <li id="profile"><i class="bi bi-person-circle"></i><p id="profile-username"></p></li>
+                <li id="logout"><i class="bi bi-power"></i><p>Logout</p></li>
+            </ul>
         </button>
         <div>
             <div id="taskbar-dialog-title"> <!-- This will be dynamically populated with the correct title when the modal opens --> </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
 </html>
