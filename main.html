@@ -25,7 +25,7 @@
          </button>
          <button class="icon" id="email" onclick="openDialog('email','Icons/Email.png', 'Contact Information')">
             <img src="Icons/Email.png">
-            <h4>Contact<br>Information</h4>
+            <h4>Contact Me!</h4>
          </button>
          <button class="icon" id="cv" onclick="openDialog('cv','Icons/aboutMe.png', 'CV')">
             <img src="Icons/aboutMe.png">
@@ -122,10 +122,17 @@
             <button class="close-btn" onclick="closeDialog('email')">X</button>
         </div>
         <div class="dialog-body">
-            <div class="dialog-body-email-container">
-                <h3>Primary: </h3><h2>conorharkin10@gmail.com</h2>
-                <h3>Secondary: </h3><h2>charkin23@qub.ac.uk</h2>
-                <h3>Phone number: </h3><h2>+353 83 0494484</h2>
+            <form id="contactForm" class="dialog-body-email-container">
+                <input type="hidden" name="access_key" value="d44f0de1-3d21-40e9-869c-a918a2b614e6">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit">Send Email</button>
+            </form>
+
+            <div id="formSuccessMessage" style="display:none; margin-top: 1em;">
+            Thank you! Your message has been sent. I will get back to you as soon as possible.
             </div>
         </div>
      </dialog>
@@ -143,12 +150,12 @@
         </div>
         <div class="dialog-body">
             <div class="dialog-body-cv-container">
-                <iframe src="Attachments/CV.pdf" frameborder="0"></iframe>
+                <iframe src="Attachments/PostPlacementCV.pdf" frameborder="0"></iframe>
             </div>
             <div class="cv-container-mobile">
-                Unfortunately this is not compatible with smaller screens, please download my cv here
+                Unfortunately this is not compatible with smaller screens, please download my CV here
                 <br>
-                <a href="Attachments/CV.pdf" download="CV.pdf">
+                <a href="Attachments/PostPlacementCV.pdf" download="PostPlacementCV.pdf">
                     <i class="bi bi-download"></i>
                 </a>
             </div>

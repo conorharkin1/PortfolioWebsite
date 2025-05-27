@@ -72,4 +72,29 @@ function displayUsername() {
     }
 }
 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            form.style.display = 'none';
+            document.getElementById('formSuccessMessage').style.display = 'block';
+        } else {
+            alert("Submission failed. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error("Error submitting form:", error);
+        alert("There was a problem submitting the form.");
+    });
+});
+
 
