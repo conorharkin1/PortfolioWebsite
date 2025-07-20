@@ -425,5 +425,31 @@ body {
     .dropdown-content {
         min-width: 50px;
     }
+
+    .card-image {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .card-image img {
+        max-width: 100%;
+        width: auto !important;
+        height: 150px !important;
+    }
+
+    .card-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-description {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card-description p {
+        width: 90%;
+    }
     
 }
